@@ -33,7 +33,7 @@ public class ProductService {
         } catch (Exception e) {
             return new ResponseEntity<>(new Product(),HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(prepo.findById(id).get(),HttpStatus.FOUND);
+        return new ResponseEntity<>(prepo.findById(id).get(),HttpStatus.OK);
     }
 
     public ResponseEntity<String> putProduct(Product product) {
